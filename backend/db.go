@@ -33,9 +33,11 @@ func NewStore(user, pass, host, port, dbname string) (*Store, error) {
 		root.Close()
 		return nil, fmt.Errorf("tidak bisa terhubung ke MySQL (%s): %w", rootCfg.Addr, err)
 	}
+	// Coba buat database. Bila user MySQL terbatas (hanya punya hak pada
+	// database tertentu), perintah ini bisa ditolak — itu tidak fatal selama
+	// database-nya memang sudah dibuat sebelumnya (lihat langkah koneksi #2).
 	if _, err := root.Exec("CREATE DATABASE IF NOT EXISTS `" + dbname + "` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"); err != nil {
-		root.Close()
-		return nil, fmt.Errorf("gagal membuat database: %w", err)
+		log.Printf("info: lewati CREATE DATABASE (%v) — mengasumsikan '%s' sudah ada", err, dbname)
 	}
 	root.Close()
 
