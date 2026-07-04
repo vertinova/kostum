@@ -75,8 +75,11 @@ export default function Landing() {
       <header className="nav nav--dark">
         <div className="container nav__inner">
           <a href="#beranda" className="brand brand--light" onClick={closeNav}>
-            <span className="brand__text">Kostum<strong>Paskibra</strong></span>
-            <span className="brand__tag">powered by simpaskor</span>
+            <img className="brand__logo" src="/simpaskor.png" alt="Simpaskor" />
+            <span className="brand__wrap">
+              <span className="brand__text">Kostum<strong>Paskibra</strong></span>
+              <span className="brand__tag">powered by simpaskor</span>
+            </span>
           </a>
           <button className="nav__toggle" aria-label="Menu" onClick={() => setNavOpen((v) => !v)}>
             <span></span><span></span><span></span>
@@ -222,8 +225,11 @@ export default function Landing() {
       <footer className="footer-s">
         <div className="container footer-s__inner">
           <span className="brand brand--light">
-            <span className="brand__text">Kostum<strong>Paskibra</strong></span>
-            <span className="brand__tag">powered by simpaskor</span>
+            <img className="brand__logo" src="/simpaskor.png" alt="Simpaskor" />
+            <span className="brand__wrap">
+              <span className="brand__text">Kostum<strong>Paskibra</strong></span>
+              <span className="brand__tag">powered by simpaskor</span>
+            </span>
           </span>
           <p>Sewa kostum paskibra area Cibinong &amp; sekitarnya. 🇮🇩</p>
           <p className="footer-s__addr">📍 {ADDRESS}</p>

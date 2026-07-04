@@ -30,8 +30,11 @@ export default function AdminLogin() {
     <div className="auth">
       <div className="auth__card">
         <Link to="/" className="brand brand--center">
-          <span className="brand__text">Kostum<strong>Paskibra</strong></span>
-          <span className="brand__tag">powered by simpaskor</span>
+          <img className="brand__logo" src="/simpaskor.png" alt="Simpaskor" />
+          <span className="brand__wrap">
+            <span className="brand__text">Kostum<strong>Paskibra</strong></span>
+            <span className="brand__tag">powered by simpaskor</span>
+          </span>
         </Link>
         <h1>Login Admin</h1>
         <p className="auth__sub">Masuk untuk mengelola produk &amp; foto katalog.</p>
