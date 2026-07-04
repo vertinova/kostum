@@ -1,0 +1,17 @@
+# ===== Backend (Go) =====
+backend/*.exe
+backend/backend
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/*.log
+
+# ===== Frontend (React) =====
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+npm-debug.log*
+
+# ===== Umum =====
+.env
+.DS_Store
+Thumbs.db
