@@ -18,8 +18,8 @@ export default function AdminLayout({ children }) {
     <div className="admin">
       <aside className="admin__side">
         <Link to="/" className="brand brand--light">
-          <span className="brand__mark">🎖️</span>
           <span className="brand__text">Kostum<strong>Paskibra</strong></span>
+          <span className="brand__tag">powered by simpaskor</span>
         </Link>
         <nav className="admin__nav">
           <Link to="/admin">📦 Produk</Link>

@@ -30,8 +30,8 @@ export default function AdminLogin() {
     <div className="auth">
       <div className="auth__card">
         <Link to="/" className="brand brand--center">
-          <span className="brand__mark">🎖️</span>
           <span className="brand__text">Kostum<strong>Paskibra</strong></span>
+          <span className="brand__tag">powered by simpaskor</span>
         </Link>
         <h1>Login Admin</h1>
         <p className="auth__sub">Masuk untuk mengelola produk &amp; foto katalog.</p>
